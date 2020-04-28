@@ -60,7 +60,7 @@
  	neigh_xmit(NEIGH_ARP_TABLE, outdev, &nexthop, skb);
  
  	return NF_STOLEN;
-@@ -488,6 +490,7 @@ nf_flow_offload_ipv6_hook(void *priv, st
+@@ -489,6 +491,7 @@ nf_flow_offload_ipv6_hook(void *priv, st
  	skb->dev = outdev;
  	nexthop = rt6_nexthop(rt, &flow->tuplehash[!dir].tuple.src_v6);
  	skb_dst_set_noref(skb, &rt->dst);
